@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+<meta name='wmail-verification' content='6772213564db917b' />
+        <meta charset="text/html;utf-8" />
+            <meta name="document-state" content="Dynamic" />
+ <meta http-equiv="content-language" content="ru" />
+ <meta name="robots" content="all" />
+        <title>Пластиковые лодки Астрахань</title>
+<head>
+<meta charset="utf-8"><!-- при открытии файла этот тег показывает кодировку-->
+
+<link rel="stylesheet" type="text/css" href="zakladka.css"/>
+<link rel="stylesheet" type="text/css" href="zakspis.css"/>
+<link rel="stylesheet" type="text/css" href="okno.css"/>
+<script src="okno.js" type="text/javascript"></script>
+<script src="zakladka.js"></script>
+<script src="time.js"></script>
+</head>  
+    <body> 
+
+<?php
+
+
+include "time.php";//присоединить файл с реальными датой и временем       //общий модуль                   
+include "config.php";//присоединить файл для подключения к серверу
+$userstable = "parol";//табл с паролями и логинами
+$link = mysql_connect($sdb_name,$user_name,$user_password)
+or die("Could not connect");//соединение с сервером
+mysql_select_db($db_name) or die("не могу выбрать мою бд");//соединение с бд
+mysql_query("SET CHARACTER SET 'utf8';"); //для кодировки
+mysql_query("SET SESSION collation_connection = 'utf8_general_ci';"); //для кодировки
+
+
+
+                                                //модуль с полями для ввода пароля и логина
+?>       
+    
+
+
+<form action="mailotp.php" method="post" >
+
+<p>
+Введите email для отправки сообщения :</p>
+<input type="text" name="name"></p>
+<br> 
+
+
+Введите  число "2" буквами <br> 
+<input type="text" name=text1 maxlength=10 size=10><br>
+
+Введите  число "2" цифрами <br> 
+<input type="text" name=text2 maxlength=10 size=10><br>
+
+
+<div><input type="submit" value="Отправить пароль на email"></div>
+</form>
+
+
+
+
+
+
+
+    </body>
+  
+</html>

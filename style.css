@@ -1,0 +1,74 @@
+body{
+ background: #ffffff;
+    background: -moz-radial-gradient(center, ellipse cover, #feffff 0%, #d2ebf9 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #feffff 0%,#d2ebf9 100%);
+    background: -o-radial-gradient(center, ellipse cover, #feffff 0%,#d2ebf9 100%);
+    background: -ms-radial-gradient(center, ellipse cover, #feffff 0%,#d2ebf9 100%);
+    background: radial-gradient(center, ellipse cover, #feffff 0%,#d2ebf9 100%);
+  background-color:grey;/* цвет фона*/
+}
+
+h1{ 
+font-family: 'Roboto Slab', serif;
+}
+
+h2{ 
+font-family: 'PT Sans', sans-serif;
+}
+
+.smallfotki{
+border:1px solid white;
+}
+
+.smallfotki:hover{
+border-color: blueviolet;
+}
+
+
+
+
+@keyframes example {
+    50%{
+        -webkit-transform: rotateY(180deg); /* Safari */
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes example2 {
+    0%{
+        -webkit-transform: rotateZ(0deg); /* Safari */
+        transform: rotateZ(0deg);
+    }
+    25%{
+        -webkit-transform: rotateZ(45deg); /* Safari */
+        transform: rotateZ(45deg);
+    }
+    50%{
+        -webkit-transform: rotateZ(0deg); /* Safari */
+        transform: rotateZ(0deg);
+    }
+    75%{
+        -webkit-transform: rotateZ(-45deg); /* Safari */
+        transform: rotateZ(-45deg);
+    }
+    100%{
+        -webkit-transform: rotateZ(0deg); /* Safari */
+        transform: rotateZ(0deg);
+    }
+}
+
+.symlodki {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: #D8EEFA;
+    animation-name: example;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+.symlodki:hover {
+    animation-name: example2;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}

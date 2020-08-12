@@ -1,0 +1,20 @@
+﻿<?php
+            $U=date(U);
+            $Ut=$U; 
+         date("d.m.y H:i",$Ut);
+            $h = date("H",$Ut); 
+            $i = date("i",$Ut);                    
+             $w=date("w",$Ut);          
+            /*if($w==6) {echo"Суббота ";}
+            else if($w==0) {echo"Воскресенье";}
+             else if($w==1) {echo"Понедельник";}
+             else if($w==2) {echo"Вторник  ";}
+             else if($w==3) {echo"Среда  ";}
+             else if($w==4) {echo"Четверг  ";}
+             else if($w==5) {echo"Пятница  ";}  */        
+            $y=date("Y",$Ut);
+            $m=date("m",$Ut);
+            $d=date("d",$Ut);           
+           // echo "   $d.$m.$y  ";                  
+        //   echo "   $h:$i<br>";            
+?>
